@@ -120,7 +120,11 @@ g++ server.cpp -o server
 
 ## 📸 Screenshots
 
-(Add your project screenshots here)
+<img width="1474" height="879" alt="Screenshot 2026-04-13 215408" src="https://github.com/user-attachments/assets/6c88a1a1-3ef1-4aed-b295-049b29cf4d03" />
+
+<img width="1014" height="867" alt="Screenshot 2026-04-13 215446" src="https://github.com/user-attachments/assets/f493b1c4-57d6-483a-a133-299c0a671884" />
+
+
 
 ---
 
