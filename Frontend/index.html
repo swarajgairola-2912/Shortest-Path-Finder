@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Shortest Path Finder</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- VIS NETWORK -->
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  </head>
+
+  <body>
+    <h1 class="title">🚀 SHORTEST PATH FINDER</h1>
+
+    <h2 class="team">by NULL POINTERS — TL: Swaraj Gairola</h2>
+
+    <p class="subtitle">
+      Visualizing Dijkstra, Bellman-Ford and Floyd-Warshall Algorithms
+    </p>
+
+    <!-- ALGORITHM BUTTONS -->
+    <div id="buttons" class="buttons hidden">
+      <button onclick="runDijkstra()">Dijkstra</button>
+      <button onclick="runBellman()">Bellman-Ford</button>
+      <button onclick="runFloyd()">Floyd-Warshall</button>
+      <button onclick="resetGraph()">Reset Graph</button>
+    </div>
+
+    <!-- GRAPH -->
+    <div class="graph-container">
+      <div id="network"></div>
+    </div>
+
+    <hr />
+
+    <!-- INPUT SECTION -->
+    <h2>User Input Graph</h2>
+
+    <label>Number of Nodes</label><br />
+    <input
+      type="number"
+      id="nodes"
+      placeholder="Enter number of nodes"
+    /><br /><br />
+
+    <label>Edges (u v w)</label><br />
+    <textarea
+      id="edges"
+      rows="6"
+      placeholder="Enter edges like:
+0 1 1
+0 3 4
+1 2 2
+2 3 1"
+    ></textarea>
+
+    <p><b>Example:</b></p>
+    <pre>
+0 1 1
+0 3 4
+1 2 2
+2 3 1
+    </pre>
+
+    <label>Source Node</label><br />
+    <input
+      type="number"
+      id="source"
+      placeholder="Enter source node"
+    /><br /><br />
+
+    <label>Destination Node</label><br />
+    <input
+      type="number"
+      id="destination"
+      placeholder="Enter destination node"
+    /><br /><br />
+
+    <button onclick="findPath()">Find Shortest Path</button>
+
+    <!-- RESULT -->
+    <h3>Result:</h3>
+    <p id="result">Waiting for input...</p>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+
+    <!-- SHOW BUTTONS AFTER LOAD -->
+    <script>
+      window.onload = function () {
+        setTimeout(() => {
+          document.getElementById("buttons").classList.remove("hidden");
+        }, 2000);
+      };
+    </script>
+  </body>
+</html>
